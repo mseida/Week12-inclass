@@ -64,6 +64,13 @@ Now let's write a function that allows us to easily adapt our rescaling to inclu
 Expand your function from 'Your Turn 1' to allow for any possible missing value type.
 ```{r}
 
+fix_missing <- function(x, missing_val=-99)
+  x[x==missing_val] <- NA
+ 
+  
+fix_missing(df$a)
+fix$missing(df$b, missing_val = -999)
+fix$missing(df$c, missing_val = -0)
 ```
 
 
@@ -77,3 +84,9 @@ To write a function,
 3. Add the name of the real object as the function argument 
 
 This sequence will help prevent bugs in your code (and reduce the time you spend correcting bugs). 
+
+*Design function with user (future you!) in mind 
+*Name your functions with meaning!
+*Plan for pipes
+*Keep it simple 
+
